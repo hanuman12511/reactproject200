@@ -14,6 +14,7 @@ export default function LoginScreen(){
     if(email!=="" && password!==""){
       localStorage.setItem("user",email)
       nav("/home")
+      window.location.reload()
       setEmail("")
     setPassword("")
          

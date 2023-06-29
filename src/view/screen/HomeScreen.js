@@ -11,8 +11,6 @@ export default function HomeScreen(){
       <>
       
       <h1> HomeScreen</h1>
-{user&&
-      <input type="button" value="logout" onClick={logout}/>
-     }     </>
+     </>
     )
   }

@@ -66,3 +66,14 @@
     background-color: rgb(225, 225, 225);
 
 }
+.nav-link{
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.navbar{
+    width: 100%;
+    background-color: aqua;
+    padding: 20px;
+
+}
