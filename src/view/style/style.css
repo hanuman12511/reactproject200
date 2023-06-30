@@ -82,3 +82,15 @@
     height: 200px;
 
 }
+.productshow{
+    width: 200px;
+    background-color: antiquewhite;
+    margin: 20px;
+    border: 1px solid rgb(235, 235, 235);
+    padding: 20px;
+
+}
+.product-div{
+    width: 100%;
+    display: inline-flex;
+}
