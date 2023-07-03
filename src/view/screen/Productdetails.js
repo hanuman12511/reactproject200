@@ -1,7 +1,8 @@
 import { useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 export default function Productdetails(){
+    const nav = useNavigate()
     const loc =useLocation()
     const [data,setData] = useState(loc.state)
 
@@ -29,8 +30,8 @@ console.log(data);
             
             <div className="pdetails-pay">
                 <p>Total pay:</p>
-                <button>Addtocart</button>
-                <button>Buy Now</button>
+                <button onClick={()=>nav('/cart',{state:""})}>Addtocart</button>
+                <button onClick={()=>nav('/payment',{state:""})}>Buy Now</button>
             </div>    
         </div>
         </>
