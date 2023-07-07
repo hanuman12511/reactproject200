@@ -58,7 +58,7 @@ function subqty(){
             <div className="pdetails-pay">
                 <p>Total pay:{totalrate}</p>
                 <button onClick={()=>nav('/cart',{state:{name:data.productname,rate:totalrate,qtyproduct:qty}})}>Addtocart</button>
-                <button onClick={()=>nav('/payment',{state:""})}>Buy Now</button>
+                <button onClick={()=>nav('/cart',{state:{name:data.productname,rate:totalrate,qtyproduct:qty}})}>Buy Now</button>
             </div>    
         </div>
         </>
