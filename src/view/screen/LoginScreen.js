@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
@@ -8,10 +9,21 @@ export default function LoginScreen(){
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
 
-  function Loginruser(){
+ async function Loginruser(){
     console.log(email);
     console.log(password);
-    if(email!=="" && password!==""){
+const params={
+  "email":email,
+  "pass":password
+}
+
+const res =await axios.post("http://ankursingh.xyz/api/Employeelogin.php",params)
+console.log(res.data);
+const{success,message}=res.data
+
+
+    if(success){
+      alert(message)
       localStorage.setItem("user",email)
       nav("/home")
       window.location.reload()
